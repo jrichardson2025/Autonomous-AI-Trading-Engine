@@ -1,0 +1,6 @@
+pandas 
+numpy 
+python-dotenv 
+schedule 
+alpaca-trade-api 
+tensorflow
