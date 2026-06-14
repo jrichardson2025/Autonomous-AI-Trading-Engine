@@ -1,21 +1,19 @@
-# Autonomous-AI-Trading-Engine
-A live, production-grade algorithmic trading pipeline with dynamic risk management and latency mitigation.
-# Autonomous AI Trading Engine: Institutional-Grade Execution Pipeline
+# Autonomous AI Trading Engine: Multi-Asset Execution Pipeline
 
 ## 📌 Project Overview
 This repository contains a production-ready algorithmic trading engine designed to autonomously harvest live market data, execute neural network inference, and manage complex order routing via the Alpaca API. 
 
-Unlike standard research models, this project focuses heavily on **Machine Learning Engineering (MLE)** and live deployment mechanics, including server-latency mitigation, dynamic state management, and absolute time-synced execution.
+Unlike standard research models, this project focuses heavily on **Machine Learning Engineering (MLE)** and live deployment mechanics. The engine is configured for multi-asset deployment, currently executing dynamically across traditional equities (**SPY**) and digital asset ETFs (**IBIT**), managing distinct volatility profiles simultaneously.
 
 ## 🏗️ Architectural Pipeline
 
 ### 1. Live Data Harvesting & Feature Engineering
-* Utilizes the Alpaca SIP feed to aggregate high-frequency 1-minute bars into 5-minute structural periods.
+* Utilizes the Alpaca SIP feed to aggregate high-frequency 1-minute bars into 5-minute structural periods across multiple ticker symbols.
 * Dynamically calculates technical features in real-time to match the exact schema the Neural Network was trained on.
 
 ### 2. Deep Learning Inference (The Brain)
 * Ingests the live feature state into a pre-trained Keras Deep Learning architecture.
-* Outputs a probabilistic edge signal to trigger execution only when statistical thresholds align with low-volatility states.
+* Outputs a probabilistic edge signal to trigger execution only when statistical thresholds align with localized low-volatility states.
 
 ### 3. Institutional Execution & Routing
 * **Complex OTO Orders:** Submits One-Triggers-Other (OTO) market orders that natively link stop-losses to entry orders at the broker level, ensuring capital protection even in the event of a local server crash.
@@ -32,4 +30,4 @@ Unlike standard research models, this project focuses heavily on **Machine Learn
 * **Execution:** `schedule` (Cron-style absolute clock syncing), `python-dotenv` (Cybersecurity/Key Management)
 
 ## ⚙️ Deployment Notes
-This script is designed for live server deployment. It requires a `.env` file containing `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` for secure authentication. The pre-trained Keras model (`dia_reversion_model.keras`) must be present in the root directory prior to engine initialization.
+This script is designed for live server deployment. It requires a `.env` file containing `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` for secure authentication. The pre-trained Keras models must be present in the root directory prior to engine initialization.
