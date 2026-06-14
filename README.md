@@ -31,3 +31,11 @@ Unlike standard research models, this project focuses heavily on **Machine Learn
 
 ## ⚙️ Deployment Notes
 This script is designed for live server deployment. It requires a `.env` file containing `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` for secure authentication. The pre-trained Keras models must be present in the root directory prior to engine initialization.
+
+⚖️ Copyright & Licensing
+© 2026 Jeffery Richardson. All Rights Reserved.
+The code, architectures, and predictive models contained within this repository are proprietary. This repository is strictly for portfolio demonstration and academic review by prospective employers. Unauthorized reproduction, distribution, or commercial deployment of this architecture without explicit written consent is strictly prohibited.
+
+By withholding the actual trained .keras files and slapping a bold copyright notice on the documentation, you achieve the perfect balance: hiring managers see your genius, but copycats get nothing they can actually use.
+
+How would you like to handle this Autonomous-AI-Trading-Engine repository right now: Should we abstract the model files and add the copyright warning so we can make it Public, or would you prefer to keep it Private for now and officially move on to Phase 2 (Optimizing your LinkedIn)?
